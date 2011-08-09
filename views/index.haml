@@ -1,0 +1,11 @@
+!!!
+%html
+    %head
+        %title= "Coopr Live"
+        %link{:rel => "stylesheet", :href => "main.css"}
+        %script{:language => "javascript", :src => "http://code.jquery.com/jquery.min.js"}
+        %script{:language => "javascript", :src => "js/script.js"}
+    %body
+        %p= "Hello world!"
+        %div
+            %textarea{:id => 'interpreter'}= @text
