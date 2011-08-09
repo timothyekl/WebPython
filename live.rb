@@ -20,8 +20,6 @@ get '/' do
   end
 
   guid = session[:guid]
-  p guid
-
   settings.wrappers[guid] = PythonWrapper.new
 
   @text = settings.wrappers[guid].read_all
@@ -33,12 +31,7 @@ end
 post '/input' do
   input = params[:input]
 
-  guid = session[:guid]
-  p guid
-
-  wrapper = settings.wrappers[guid]
-  p wrapper
-  p settings.wrappers
+  wrapper = settings.wrappers[session[:guid]]
   wrapper.input input
 
   output = ""
