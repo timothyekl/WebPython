@@ -20,6 +20,9 @@ get '/' do
   end
 
   guid = session[:guid]
+  if not settings.wrappers[guid].nil?
+    settings.wrappers[guid].terminate
+  end
   settings.wrappers[guid] = PythonWrapper.new
 
   sleep 0.2

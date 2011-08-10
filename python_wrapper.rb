@@ -38,4 +38,11 @@ class PythonWrapper
     self.pyin.write(input + "\n")
     self.pyin.flush
   end
+  
+  def terminate
+    self.input "quit()"
+    self.pyin.close
+    self.pyout.close
+    self.pyerr.close
+  end
 end

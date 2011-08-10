@@ -28,6 +28,7 @@ jQuery(function($, undefined) {
             success: function(data, textStatus, jqxhr) {
                 term.echo(String(data));
             },
+            timeout: 1000,
             type: 'POST'
         });
     }, {
