@@ -8,6 +8,7 @@ require 'sass'
 require 'guid'
 
 require 'python_wrapper'
+require 'string'
 
 configure do
   enable :sessions
@@ -24,7 +25,7 @@ get '/' do
 
   sleep 0.2
 
-  @text = settings.wrappers[guid].read_all[0..-6]
+  @text = settings.wrappers[guid].read_all[0..-6].dedent
 
   haml :index
 end
