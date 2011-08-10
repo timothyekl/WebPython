@@ -8,6 +8,6 @@
         %script{:language => "javascript", :src => "lib/jquery.terminal/js/jquery.terminal-0.3.6.min.js"}
         %script{:language => "javascript", :src => "js/script.js"}
     %body
-        %p= "Hello world!"
-        %div{:id => 'interpreter'}
-        %div{:id => 'initial'}= @text
+        %div{:id => 'content'}
+            %div{:id => 'interpreter'}
+            %div{:id => 'initial'}= @text
