@@ -3,9 +3,11 @@
     %head
         %title= "Coopr Live"
         %link{:rel => "stylesheet", :href => "main.css"}
+        %link{:rel => "stylesheet", :href => "lib/jquery.terminal/css/jquery.terminal.css"}
         %script{:language => "javascript", :src => "http://code.jquery.com/jquery.min.js"}
+        %script{:language => "javascript", :src => "lib/jquery.terminal/js/jquery.terminal-0.3.6.min.js"}
         %script{:language => "javascript", :src => "js/script.js"}
     %body
         %p= "Hello world!"
-        %div
-            %textarea{:id => 'interpreter'}= @text
+        %div{:id => 'interpreter'}
+        %div{:id => 'initial'}= @text

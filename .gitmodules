@@ -1,0 +1,3 @@
+[submodule "public/lib/jquery.terminal"]
+	path = public/lib/jquery.terminal
+	url = git://github.com/jcubic/jquery.terminal.git

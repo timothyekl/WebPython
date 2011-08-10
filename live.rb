@@ -22,8 +22,9 @@ get '/' do
   guid = session[:guid]
   settings.wrappers[guid] = PythonWrapper.new
 
-  @text = settings.wrappers[guid].read_all
-  @text += " "
+  sleep 0.2
+
+  @text = settings.wrappers[guid].read_all[0..-6]
 
   haml :index
 end
@@ -40,7 +41,7 @@ post '/input' do
     output += wrapper.read_all
   end
 
-  return output
+  return output[0..-6]
 end
 
 get '/main.css' do
